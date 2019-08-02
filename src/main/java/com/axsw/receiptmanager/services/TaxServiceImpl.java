@@ -45,6 +45,6 @@ class TaxServiceImpl implements TaxService {
 	}
 
 	private static BigDecimal round0_05(BigDecimal d) {
-		return d.multiply(new BigDecimal(20)).setScale(0, RoundingMode.HALF_UP).multiply(new BigDecimal("0.05"));
+		return d.multiply(new BigDecimal(20)).setScale(0, RoundingMode.UP).multiply(new BigDecimal("0.05"));
 	}
 }

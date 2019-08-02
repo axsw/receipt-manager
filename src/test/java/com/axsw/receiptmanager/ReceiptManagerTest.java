@@ -24,20 +24,8 @@ public class ReceiptManagerTest {
 		//Note: I modified the original expected output because I think that the first row is wrong:
 		//there shouldn't be a space after the word "book".
 		
-//		sb = new StringBuilder();
-//		sb.append("1 book : 12.49");
-//		sb.append("\r\n");
-//		sb.append("1 music CD: 16.49");
-//		sb.append("\r\n");
-//		sb.append("1 chocolate bar: 0.85");
-//		sb.append("\r\n");
-//		sb.append("Sales Taxes: 1.50");
-//		sb.append("\r\n");
-//		sb.append("Total: 29.83");
-//		String expectedReceiptString = sb.toString();
-		
 		sb = new StringBuilder();
-		sb.append("1 book: 12.49"); //removed the wrong space
+		sb.append("1 book: 12.49"); //the original was "1 book : 12.49"
 		sb.append("\r\n");
 		sb.append("1 music CD: 16.49");
 		sb.append("\r\n");
@@ -80,8 +68,6 @@ public class ReceiptManagerTest {
 	@Test
 	public void test3() {
 		System.out.println("TEST 3");
-		System.out.println("Note: the expected output is different from the one specified in the exercise instruction.");
-		System.out.println("See the source code of this test for explanations.");
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append("1 imported bottle of perfume at 27.99");
@@ -96,23 +82,6 @@ public class ReceiptManagerTest {
 		System.out.println("INPUT");
 		System.out.println(shoppingBasketString);
 
-		//Note: I modified the original expected output because I think that the tax value of the fourth item is wrong:
-		//11.25*5/100=0.5625. Rounding up to the nearest 0.05 we obtain 0.55 instead of 0.6
-		
-//		sb = new StringBuilder();
-//		sb.append("1 imported bottle of perfume: 32.19");
-//		sb.append("\r\n");
-//		sb.append("1 bottle of perfume: 20.89");
-//		sb.append("\r\n");
-//		sb.append("1 packet of headache pills: 9.75");
-//		sb.append("\r\n");
-//		sb.append("1 imported box of chocolates: 11.85");
-//		sb.append("\r\n");
-//		sb.append("Sales Taxes: 6.70");
-//		sb.append("\r\n");
-//		sb.append("Total: 74.68");
-//		String expectedReceiptString = sb.toString();
-		
 		sb = new StringBuilder();
 		sb.append("1 imported bottle of perfume: 32.19");
 		sb.append("\r\n");
@@ -120,11 +89,11 @@ public class ReceiptManagerTest {
 		sb.append("\r\n");
 		sb.append("1 packet of headache pills: 9.75");
 		sb.append("\r\n");
-		sb.append("1 imported box of chocolates: 11.80"); //changed amount to 11.80 because taxes are 0.55
+		sb.append("1 imported box of chocolates: 11.85");
 		sb.append("\r\n");
-		sb.append("Sales Taxes: 6.65"); //changed amount to 6.65
+		sb.append("Sales Taxes: 6.70");
 		sb.append("\r\n");
-		sb.append("Total: 74.63"); //changed amount to 74.63
+		sb.append("Total: 74.68");
 		String expectedReceiptString = sb.toString();
 		
 		testReceiptManager(shoppingBasketString, expectedReceiptString);
