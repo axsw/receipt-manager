@@ -80,6 +80,8 @@ public class ReceiptManagerTest {
 	@Test
 	public void test3() {
 		System.out.println("TEST 3");
+		System.out.println("Note: the expected output is different from the one specified in the exercise instruction.");
+		System.out.println("See the source code of this test for explanations.");
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append("1 imported bottle of perfume at 27.99");
